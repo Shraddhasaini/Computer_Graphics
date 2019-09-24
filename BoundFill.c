@@ -13,9 +13,9 @@ struct Color {
 };
 
 void init() {
-	glClearColor(1.0, 1.0, 1.0, 0.0);
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glColor3f(0.0, 0.0, 0.0);
-	glPointSize(1.0);
+	glPointSize(2.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluOrtho2D(0, 640, 0, 480);
@@ -95,7 +95,7 @@ void draw_square(Point a, GLint length) {
 
 void display(void) {
 	Point pt = {320, 240};
-	GLfloat length = 50;
+	GLfloat length = 100;
 
 	glClear(GL_COLOR_BUFFER_BIT);
 	glBegin(GL_POINTS);
